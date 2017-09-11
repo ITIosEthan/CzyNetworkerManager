@@ -1,0 +1,396 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06B057971F667294002B9006 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B0574B1F667293002B9006 /* AppDelegate.m */; };
+		06B057981F667294002B9006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06B0574C1F667293002B9006 /* Assets.xcassets */; };
+		06B057991F667294002B9006 /* Goods.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B0578E1F667294002B9006 /* Goods.m */; };
+		06B0579A1F667294002B9006 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06B0578F1F667294002B9006 /* Info.plist */; };
+		06B0579B1F667294002B9006 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06B057901F667294002B9006 /* LaunchScreen.storyboard */; };
+		06B0579C1F667294002B9006 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B057911F667294002B9006 /* main.m */; };
+		06B0579D1F667294002B9006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06B057921F667294002B9006 /* Main.storyboard */; };
+		06B0579E1F667294002B9006 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B057941F667294002B9006 /* ViewController.m */; };
+		06B0579F1F667294002B9006 /* ZuoPins.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B057961F667294002B9006 /* ZuoPins.m */; };
+		06B057A21F6672E2002B9006 /* CzyNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B057A11F6672E2002B9006 /* CzyNetworkManager.m */; };
+		06B057A61F667963002B9006 /* CzyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B057A51F667963002B9006 /* CzyTableView.m */; };
+		614298930F9460AAC65DBB18 /* libPods-CzyNetWorkerManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25F48C12BF7D7D27CBCC5D1 /* libPods-CzyNetWorkerManager.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		06B055E81F663E5B002B9006 /* CzyNetWorkerManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CzyNetWorkerManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06B0574A1F667293002B9006 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		06B0574B1F667293002B9006 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		06B0574C1F667293002B9006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		06B0578D1F667294002B9006 /* Goods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goods.h; sourceTree = "<group>"; };
+		06B0578E1F667294002B9006 /* Goods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goods.m; sourceTree = "<group>"; };
+		06B0578F1F667294002B9006 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06B057901F667294002B9006 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		06B057911F667294002B9006 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		06B057921F667294002B9006 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		06B057931F667294002B9006 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		06B057941F667294002B9006 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		06B057951F667294002B9006 /* ZuoPins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZuoPins.h; sourceTree = "<group>"; };
+		06B057961F667294002B9006 /* ZuoPins.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZuoPins.m; sourceTree = "<group>"; };
+		06B057A01F6672E2002B9006 /* CzyNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CzyNetworkManager.h; sourceTree = "<group>"; };
+		06B057A11F6672E2002B9006 /* CzyNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CzyNetworkManager.m; sourceTree = "<group>"; };
+		06B057A41F667963002B9006 /* CzyTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CzyTableView.h; sourceTree = "<group>"; };
+		06B057A51F667963002B9006 /* CzyTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CzyTableView.m; sourceTree = "<group>"; };
+		329B60F2B2B4480C3D3419E9 /* Pods-CzyNetWorkerManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CzyNetWorkerManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CzyNetWorkerManager/Pods-CzyNetWorkerManager.debug.xcconfig"; sourceTree = "<group>"; };
+		ADE09CE1627CE8039F4E93FC /* Pods-CzyNetWorkerManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CzyNetWorkerManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-CzyNetWorkerManager/Pods-CzyNetWorkerManager.release.xcconfig"; sourceTree = "<group>"; };
+		C25F48C12BF7D7D27CBCC5D1 /* libPods-CzyNetWorkerManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CzyNetWorkerManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06B055E51F663E5B002B9006 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				614298930F9460AAC65DBB18 /* libPods-CzyNetWorkerManager.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06B055DF1F663E5B002B9006 = {
+			isa = PBXGroup;
+			children = (
+				06B057491F667293002B9006 /* CzyNetWorkerManager */,
+				06B055E91F663E5B002B9006 /* Products */,
+				163C20064C1F174FC177650E /* Pods */,
+				CF5A97DF05F28EF04D4FC426 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		06B055E91F663E5B002B9006 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06B055E81F663E5B002B9006 /* CzyNetWorkerManager.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06B057491F667293002B9006 /* CzyNetWorkerManager */ = {
+			isa = PBXGroup;
+			children = (
+				06B057A01F6672E2002B9006 /* CzyNetworkManager.h */,
+				06B057A11F6672E2002B9006 /* CzyNetworkManager.m */,
+				06B057A41F667963002B9006 /* CzyTableView.h */,
+				06B057A51F667963002B9006 /* CzyTableView.m */,
+				06B057931F667294002B9006 /* ViewController.h */,
+				06B057941F667294002B9006 /* ViewController.m */,
+				06B0574A1F667293002B9006 /* AppDelegate.h */,
+				06B0574B1F667293002B9006 /* AppDelegate.m */,
+				06B0578D1F667294002B9006 /* Goods.h */,
+				06B0578E1F667294002B9006 /* Goods.m */,
+				06B057951F667294002B9006 /* ZuoPins.h */,
+				06B057961F667294002B9006 /* ZuoPins.m */,
+				06B0578F1F667294002B9006 /* Info.plist */,
+				06B057901F667294002B9006 /* LaunchScreen.storyboard */,
+				06B057911F667294002B9006 /* main.m */,
+				06B057921F667294002B9006 /* Main.storyboard */,
+				06B0574C1F667293002B9006 /* Assets.xcassets */,
+			);
+			path = CzyNetWorkerManager;
+			sourceTree = "<group>";
+		};
+		163C20064C1F174FC177650E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				329B60F2B2B4480C3D3419E9 /* Pods-CzyNetWorkerManager.debug.xcconfig */,
+				ADE09CE1627CE8039F4E93FC /* Pods-CzyNetWorkerManager.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF5A97DF05F28EF04D4FC426 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C25F48C12BF7D7D27CBCC5D1 /* libPods-CzyNetWorkerManager.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06B055E71F663E5B002B9006 /* CzyNetWorkerManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06B055FF1F663E5B002B9006 /* Build configuration list for PBXNativeTarget "CzyNetWorkerManager" */;
+			buildPhases = (
+				445A088B03970B8C50FC2A55 /* [CP] Check Pods Manifest.lock */,
+				06B055E41F663E5B002B9006 /* Sources */,
+				06B055E51F663E5B002B9006 /* Frameworks */,
+				06B055E61F663E5B002B9006 /* Resources */,
+				56850704D13B27B194E0A41A /* [CP] Embed Pods Frameworks */,
+				6B2349C060419787BF3ED408 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CzyNetWorkerManager;
+			productName = CzyNetWorkerManager;
+			productReference = 06B055E81F663E5B002B9006 /* CzyNetWorkerManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		06B055E01F663E5B002B9006 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = macOfEthan;
+				TargetAttributes = {
+					06B055E71F663E5B002B9006 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = TGQ3T5S6T9;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 06B055E31F663E5B002B9006 /* Build configuration list for PBXProject "CzyNetWorkerManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 06B055DF1F663E5B002B9006;
+			productRefGroup = 06B055E91F663E5B002B9006 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06B055E71F663E5B002B9006 /* CzyNetWorkerManager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06B055E61F663E5B002B9006 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06B0579B1F667294002B9006 /* LaunchScreen.storyboard in Resources */,
+				06B0579A1F667294002B9006 /* Info.plist in Resources */,
+				06B057981F667294002B9006 /* Assets.xcassets in Resources */,
+				06B0579D1F667294002B9006 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		445A088B03970B8C50FC2A55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		56850704D13B27B194E0A41A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CzyNetWorkerManager/Pods-CzyNetWorkerManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B2349C060419787BF3ED408 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CzyNetWorkerManager/Pods-CzyNetWorkerManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06B055E41F663E5B002B9006 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06B0579F1F667294002B9006 /* ZuoPins.m in Sources */,
+				06B057A21F6672E2002B9006 /* CzyNetworkManager.m in Sources */,
+				06B057991F667294002B9006 /* Goods.m in Sources */,
+				06B0579C1F667294002B9006 /* main.m in Sources */,
+				06B0579E1F667294002B9006 /* ViewController.m in Sources */,
+				06B057A61F667963002B9006 /* CzyTableView.m in Sources */,
+				06B057971F667294002B9006 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		06B055FD1F663E5B002B9006 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		06B055FE1F663E5B002B9006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		06B056001F663E5B002B9006 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 329B60F2B2B4480C3D3419E9 /* Pods-CzyNetWorkerManager.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TGQ3T5S6T9;
+				INFOPLIST_FILE = CzyNetWorkerManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.CzyNetWorkerManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		06B056011F663E5B002B9006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADE09CE1627CE8039F4E93FC /* Pods-CzyNetWorkerManager.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TGQ3T5S6T9;
+				INFOPLIST_FILE = CzyNetWorkerManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.CzyNetWorkerManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06B055E31F663E5B002B9006 /* Build configuration list for PBXProject "CzyNetWorkerManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06B055FD1F663E5B002B9006 /* Debug */,
+				06B055FE1F663E5B002B9006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06B055FF1F663E5B002B9006 /* Build configuration list for PBXNativeTarget "CzyNetWorkerManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06B056001F663E5B002B9006 /* Debug */,
+				06B056011F663E5B002B9006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 06B055E01F663E5B002B9006 /* Project object */;
+}
