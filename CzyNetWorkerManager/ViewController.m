@@ -73,8 +73,7 @@
 {
     [[CzyNetworkManager shareManager] loadDataWithMethod:CzyLoadTypePost andLoadUrl:apiUrl andLoadPara:nil andSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        self.tableView.loading = NO;
-        [self czyRefreshView];
+        [self endLoading];
         
         _goods = [Goods yy_modelWithJSON:responseObject];
         
@@ -82,10 +81,16 @@
         
     } andFailure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
-        self.tableView.loading = NO;
-        [self czyRefreshView];
-
+        [self endLoading];
     }];
+}
+
+#pragma mark - endLoading
+- (void)endLoading
+{
+    self.tableView.loading = NO;
+    [self.refreshView endRefresh];
+    [self czyRefreshView];
 }
 
 #pragma mark - UITableViewDelegate, UITableViewDataSource
@@ -120,7 +125,7 @@
 #pragma mark - <SRRefreshDelegate>
 - (void)slimeRefreshStartRefresh:(SRRefreshView *)refreshView
 {
-    [self.refreshView performSelector:@selector(endRefresh) withObject:nil afterDelay:3];
+    [self performSelector:@selector(fetchDataes) withObject:nil afterDelay:3];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
