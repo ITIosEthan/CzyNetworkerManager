@@ -15,7 +15,6 @@
 		06B0579C1F667294002B9006 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B057911F667294002B9006 /* main.m */; };
 		06B0579D1F667294002B9006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06B057921F667294002B9006 /* Main.storyboard */; };
 		06B0579E1F667294002B9006 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B057941F667294002B9006 /* ViewController.m */; };
-		06B0579F1F667294002B9006 /* ZuoPins.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B057961F667294002B9006 /* ZuoPins.m */; };
 		06B057A21F6672E2002B9006 /* CzyNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B057A11F6672E2002B9006 /* CzyNetworkManager.m */; };
 		06B057A61F667963002B9006 /* CzyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B057A51F667963002B9006 /* CzyTableView.m */; };
 		614298930F9460AAC65DBB18 /* libPods-CzyNetWorkerManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25F48C12BF7D7D27CBCC5D1 /* libPods-CzyNetWorkerManager.a */; };
@@ -34,8 +33,6 @@
 		06B057921F667294002B9006 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		06B057931F667294002B9006 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		06B057941F667294002B9006 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		06B057951F667294002B9006 /* ZuoPins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZuoPins.h; sourceTree = "<group>"; };
-		06B057961F667294002B9006 /* ZuoPins.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZuoPins.m; sourceTree = "<group>"; };
 		06B057A01F6672E2002B9006 /* CzyNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CzyNetworkManager.h; sourceTree = "<group>"; };
 		06B057A11F6672E2002B9006 /* CzyNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CzyNetworkManager.m; sourceTree = "<group>"; };
 		06B057A41F667963002B9006 /* CzyTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CzyTableView.h; sourceTree = "<group>"; };
@@ -88,8 +85,6 @@
 				06B0574B1F667293002B9006 /* AppDelegate.m */,
 				06B0578D1F667294002B9006 /* Goods.h */,
 				06B0578E1F667294002B9006 /* Goods.m */,
-				06B057951F667294002B9006 /* ZuoPins.h */,
-				06B057961F667294002B9006 /* ZuoPins.m */,
 				06B0578F1F667294002B9006 /* Info.plist */,
 				06B057901F667294002B9006 /* LaunchScreen.storyboard */,
 				06B057911F667294002B9006 /* main.m */,
@@ -240,7 +235,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06B0579F1F667294002B9006 /* ZuoPins.m in Sources */,
 				06B057A21F6672E2002B9006 /* CzyNetworkManager.m in Sources */,
 				06B057991F667294002B9006 /* Goods.m in Sources */,
 				06B0579C1F667294002B9006 /* main.m in Sources */,
