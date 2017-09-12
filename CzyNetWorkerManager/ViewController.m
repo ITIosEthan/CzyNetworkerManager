@@ -8,6 +8,7 @@
 
 #ifndef apiUrl
 #define apiUrl @"http://guangdiu.com/api/getranklist.php"
+#define CZYWEAK(OBJ) __weak typeof(OBJ) weak##OBJ = OBJ
 #endif
 
 #import "ViewController.h"
@@ -21,13 +22,25 @@
 @property (nonatomic, strong) Goods *goods;
 @property (nonatomic, strong) CzyTableView *tableView;
 @property (nonatomic, strong) SRRefreshView *refreshView;
+@property (nonatomic, strong) UIBarButtonItem *delete;
+
 @end
 
 @implementation ViewController
 
+- (UIBarButtonItem *)delete
+{
+    if (!_delete) {
+        self.delete = [[UIBarButtonItem alloc] initWithTitle:@"清空" style:UIBarButtonItemStylePlain target:self action:@selector(delete:)];
+    }
+    return _delete;
+}
+
 #pragma mark - viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.rightBarButtonItem = self.delete;
     
     [self czyTableViewInit];
     
@@ -41,13 +54,21 @@
         return;
     }
     
-    _tableView = [[CzyTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    _tableView = [[CzyTableView alloc] initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-64) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];
     
     self.tableView.tableFooterView = [UIView new];
     self.tableView.tableHeaderView = [UIView new];
+    
+    #pragma mark - 重新获取数据
+    CZYWEAK(self);
+    
+    self.tableView.loadDataAgain = ^(){
+        
+        [weakself fetchDataes];
+    };
 }
 
 #pragma mark - slimeRefresh
@@ -125,7 +146,7 @@
 #pragma mark - <SRRefreshDelegate>
 - (void)slimeRefreshStartRefresh:(SRRefreshView *)refreshView
 {
-    [self performSelector:@selector(fetchDataes) withObject:nil afterDelay:3];
+    [self performSelector:@selector(fetchDataes) withObject:nil afterDelay:0];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -136,6 +157,16 @@
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     [self.refreshView scrollViewDidEndDraging];
+}
+
+#pragma mark - 删除
+- (void)delete:(UIBarButtonItem *)bbi
+{
+    _goods = nil;
+    
+    self.tableView.loading = NO;
+    
+    [self.tableView reloadData];
 }
 
 

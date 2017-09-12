@@ -39,21 +39,32 @@
 #pragma mark - DZNEmptyDataSetSource, DZNEmptyDataSetDelegate
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
 {
+    NSString *contentTitle = @"";
+    
     if (self.loading == NO) {
-        return nil;
+        
+        contentTitle = @"暂无数据";
+    }else{
+        contentTitle = @"正在获取数据";
     }
     
-    NSMutableAttributedString *s = [[NSMutableAttributedString alloc] initWithString:@"正在获取数据"];
+    NSMutableAttributedString *s = [[NSMutableAttributedString alloc] initWithString:contentTitle];
     [s addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16] range:NSMakeRange(0, s.string.length)];
     return s;
 }
 
 - (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView
 {
+    NSString *descriptionString = @"";
+    
     if (self.loading == NO) {
-        return nil;
+        
+        descriptionString = @"轻触重新获取...";
+    }else{
+        descriptionString = @"请稍后...";
     }
-    NSString *contentS = @"请稍后...";
+    
+    NSString *contentS = descriptionString;
     NSMutableAttributedString *s = [[NSMutableAttributedString alloc] initWithString:contentS];
     [s addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:13] range:NSMakeRange(0, contentS.length)];
     return s;
@@ -62,6 +73,16 @@
 - (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView
 {
     return YES;
+}
+
+- (void)emptyDataSet:(UIScrollView *)scrollView didTapView:(UIView *)view
+{
+    self.loading = YES;
+    [self reloadEmptyDataSet];
+    
+    if (self.loadDataAgain) {
+        self.loadDataAgain();
+    }
 }
 
 - (BOOL)emptyDataSetShouldAnimateImageView:(UIScrollView *)scrollView
@@ -88,5 +109,9 @@
     return animation;
 }
 
+- (void)dealloc
+{
+    NSLog(@"czyTableView dealloc");
+}
 
 @end

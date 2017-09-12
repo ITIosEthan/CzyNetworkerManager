@@ -32,6 +32,7 @@ static AFHTTPSessionManager *sessionManager = nil;
         
         sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
         
+        //@"text/html"
         sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/plain",  nil];
     }
     return manager;
@@ -44,7 +45,7 @@ static AFHTTPSessionManager *sessionManager = nil;
         
         [sessionManager POST:loadUrl parameters:loadPara progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 if (success) {
                     success(task, responseObject);
                 }
