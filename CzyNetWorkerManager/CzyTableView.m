@@ -23,15 +23,64 @@
         self.emptyDataSetDelegate = self;
         
         self.loading = YES;
-        
+
     }
     return self;
 }
 
-#pragma mark - setLoading
+#pragma mark - Setter
 - (void)setLoading:(BOOL)loading
 {
     _loading = loading;
+    
+    [self reloadEmptyDataSet];
+}
+
+- (void)setLoadingTitle:(NSString *)loadingTitle
+{
+    _loadingTitle = loadingTitle;
+    
+    [self reloadEmptyDataSet];
+}
+
+- (void)setIdleTitle:(NSString *)idleTitle
+{
+    _idleTitle = idleTitle;
+    
+    [self reloadEmptyDataSet];
+}
+
+- (void)setLoadingSubTitle:(NSString *)loadingSubTitle
+{
+    _loadingSubTitle = loadingSubTitle;
+    
+    [self reloadEmptyDataSet];
+}
+
+- (void)setIdleSubTitle:(NSString *)idleSubTitle
+{
+    _idleSubTitle = idleSubTitle;
+    
+    [self reloadEmptyDataSet];
+}
+
+- (void)setLoadingMaskImageView:(NSString *)loadingMaskImageView
+{
+    _loadingMaskImageView = loadingMaskImageView;
+    
+    [self reloadEmptyDataSet];
+}
+
+- (void)setLoadingFinishMaskImageView:(NSString *)loadingFinishMaskImageView
+{
+    _loadingFinishMaskImageView = loadingFinishMaskImageView;
+    
+    [self reloadEmptyDataSet];
+}
+
+- (void)setAnimationImages:(NSArray *)animationImages
+{
+    _animationImages = animationImages;
     
     [self reloadEmptyDataSet];
 }
@@ -40,16 +89,18 @@
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
 {
     NSString *contentTitle = @"";
-    
+
     if (self.loading == NO) {
         
-        contentTitle = @"暂无数据";
+        contentTitle = self.idleTitle.length ? self.idleTitle : @"暂无数据";
     }else{
-        contentTitle = @"正在获取数据";
+        
+        contentTitle = self.loadingTitle.length ? self.loadingTitle : @"正在加载";
     }
     
     NSMutableAttributedString *s = [[NSMutableAttributedString alloc] initWithString:contentTitle];
     [s addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16] range:NSMakeRange(0, s.string.length)];
+    
     return s;
 }
 
@@ -59,9 +110,10 @@
     
     if (self.loading == NO) {
         
-        descriptionString = @"轻触重新获取...";
+        descriptionString = self.idleSubTitle.length ? self.idleSubTitle : @"点击或轻触重新加载";
     }else{
-        descriptionString = @"请稍后...";
+        
+        descriptionString = self.loadingSubTitle.length ? self.loadingSubTitle : @"请稍后";
     }
     
     NSString *contentS = descriptionString;
@@ -80,6 +132,7 @@
     self.loading = YES;
     [self reloadEmptyDataSet];
     
+    /**点击回调*/
     if (self.loadDataAgain) {
         self.loadDataAgain();
     }
@@ -93,25 +146,45 @@
 - (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
 {
     if (self.loading == NO) {
-        return nil;
+        
+        if (_loadingFinishMaskImageView.length) {
+            return [UIImage imageNamed:_loadingFinishMaskImageView];
+        }
+    }else{
+    
+        if (_loadingMaskImageView.length) {
+            return [UIImage imageNamed:_loadingMaskImageView];
+        }
     }
     
-    return [UIImage imageNamed:@"dropdown_anim__0001"];
+    if ([_animationImages.firstObject isKindOfClass:[NSString class]]) {
+        return [UIImage imageNamed:_animationImages.firstObject];
+    }
+    
+    return _animationImages.firstObject;
 }
 
 - (CAAnimation *)imageAnimationForEmptyDataSet:(UIScrollView *)scrollView
 {
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"contents"];
-    animation.values = [NSArray arrayWithObjects:(id)[UIImage imageNamed:@"dropdown_anim__0001"].CGImage,(id)[UIImage imageNamed:@"dropdown_anim__0002"].CGImage,(id)[UIImage imageNamed:@"dropdown_anim__0003"].CGImage,(id)[UIImage imageNamed:@"dropdown_anim__0004"].CGImage,(id)[UIImage imageNamed:@"dropdown_anim__0005"].CGImage,(id)[UIImage imageNamed:@"dropdown_anim__0006"].CGImage,(id)[UIImage imageNamed:@"dropdown_anim__0007"].CGImage,(id)[UIImage imageNamed:@"dropdown_anim__0008"].CGImage,(id)[UIImage imageNamed:@"dropdown_anim__0009"].CGImage,(id)[UIImage imageNamed:@"dropdown_anim__0010"].CGImage, nil];
+    
+    NSMutableArray *images = [NSMutableArray array];
+    
+    for (id obj in _animationImages) {
+        
+        if ([obj isKindOfClass:[UIImage class]]) {
+            [images addObject:(id)[obj CGImage]];
+        }else if([obj isKindOfClass:[NSString class]]){
+            [images addObject:(id)[UIImage imageNamed:obj].CGImage];
+        }
+    }
+    
+    animation.values = images;
     animation.duration = 1.0;
     animation.repeatCount = MAXFLOAT;
     
     return animation;
 }
 
-- (void)dealloc
-{
-    NSLog(@"czyTableView dealloc");
-}
 
 @end

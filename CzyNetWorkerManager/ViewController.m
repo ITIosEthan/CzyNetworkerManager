@@ -62,6 +62,17 @@
     self.tableView.tableFooterView = [UIView new];
     self.tableView.tableHeaderView = [UIView new];
     
+    /**动画图片*/
+    _tableView.animationImages = @[@"dropdown_anim__0001",@"dropdown_anim__0002",@"dropdown_anim__0003",@"dropdown_anim__0004",@"dropdown_anim__0005",@"dropdown_anim__0006",@"dropdown_anim__0007",@"dropdown_anim__0008"];
+    
+    _tableView.idleTitle = @"空闲状态标题";
+    _tableView.loadingTitle = @"加载状态标题";
+    _tableView.idleSubTitle = @"空闲状态子标题";
+    _tableView.loadingSubTitle = @"加载状态子标题";
+
+    _tableView.loadingMaskImageView = @"dropdown_anim__0008";
+    _tableView.loadingFinishMaskImageView = @"dropdown_anim__0005";
+    
     #pragma mark - 重新获取数据
     CZYWEAK(self);
     
